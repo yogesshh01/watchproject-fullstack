@@ -1,0 +1,577 @@
+/* ===== HERO CONTAINER ===== */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ===== VIDEO ===== */
+.hero-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  color: white;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: gold;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+.nav-links li:hover {
+  color: gold;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.menuOpen {
+    color: white;
+}
+
+/* ===== HERO TEXT ===== */
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 90%;
+}
+
+.hero-overlay h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-overlay p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: gold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* ===== HAMBURGER ===== */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  /* background-color: wh; */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+  }
+
+  .hero-overlay h1 {
+    font-size: 28px;
+  }
+
+  .hero-overlay p {
+    font-size: 14px;
+  }
+
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+
+/* cards css */
+
+/* ===== PRODUCTS SECTION ===== */
+.products-container {
+  padding: 60px 8%;
+  /* background: #d6d0d0; */
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* ===== PRODUCT CARD ===== */
+.product-card {
+  /* background: white; */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  /* background-color: rgb(226, 216, 216); */
+  /* box-shadow: 0 4px 12px rgba(0,0,0,0.08); */
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  
+  /* border-radius: 20px; */
+}
+
+/* ===== TEXT ===== */
+.watch-price {
+  color: gold;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.watch-name {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* ===== BUTTON ===== */
+.cart-btn {
+  padding: 10px 20px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-btn:hover {
+  background: gold;
+  color: black;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+}
+
+/* limited time offer css */
+
+/* ===== CONTAINER ===== */
+.offer-container {
+  display: flex;
+  min-height: 90vh;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* ===== LEFT SIDE ===== */
+.offer-left {
+  flex: 1;
+  padding: 60px;
+  color: white;
+  background: linear-gradient(135deg, #0f172a, #475569);
+}
+
+.offer-badge {
+  background: #2563eb;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.offer-left h1 {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.offer-left p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* ===== COUNTDOWN ===== */
+.countdown {
+  display: flex;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.time-box {
+  background: rgba(255,255,255,0.1);
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.time-box h2 {
+  font-size: 22px;
+}
+
+.time-box span {
+  font-size: 13px;
+}
+
+/* ===== FEATURES ===== */
+.features {
+  display: flex;
+  gap: 25px;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* ===== RIGHT SIDE ===== */
+.offer-right {
+  flex: 1;
+  background: #f1f5f9;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offer-right img {
+  width: 100%;
+  /* max-width: 400px; */
+  height:100vh;
+
+ 
+}
+
+/* ===== PRICE CARD ===== */
+.price-card {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 14px;
+}
+
+.price-card h3 {
+  margin: 5px 0;
+}
+
+.price-card span {
+  color: green;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+/* @media (max-width: 992px) {
+  .offer-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .offer-left {
+    padding: 40px;
+  }
+
+  .offer-left h1 {
+    font-size: 36px;
+  }
+
+  .offer-right {
+    padding: 40px 0;
+  }
+
+  .price-card {
+    right: 20px;
+    bottom: 20px;
+  }
+} */
+
+@media (max-width: 992px) {
+  .offer-container {
+    flex-direction: column;
+    height: auto;   /* allow natural height on mobile */
+  }
+
+  .offer-left,
+  .offer-right {
+    height: auto;
+    width: 100%;
+  }
+
+  .offer-left {
+    padding: 40px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 576px) {
+
+  .offer-container {
+    margin: 20px;
+  }
+
+  .offer-left h1 {
+    font-size: 28px;
+  }
+
+  .countdown {
+    flex-wrap: wrap;
+  }
+/* 
+  .time-box {
+    flex: 1 1 ;
+  } */
+
+  .features {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .offer-right img {
+    width: 204px;
+    /* max-width: 400px; */
+    height: 304px;
+    margin-top: 34px;
+    border-radius: 20px;
+    
+    
+  }
+
+  .price-card {
+    position: static;
+    margin-top: 20px;
+  }
+}
+
+
+.footericon{
+  display: flex;
+  gap: 10px;
+}
+
+.main{
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer{
+  background-color: rgb(224, 216, 216);
+  border-radius: 10px;
+  width:100%;
+  
+}
+/* 
+.featuredbrand{
+  background-color: lightgray;
+} */
+
+.images{
+margin-top: 40px;
+}
+
+.h1text{
+  margin-left: 30px;
+  margin-top: 50PX;
+  text-align: center;
+}
+
+/* shop by category */
+
+
+/* ===== CATEGORY SECTION ===== */
+.categories {
+  padding: 80px 5%;
+  /* background: #0f0f0f; */
+  text-align: center;
+}
+
+.category-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* ===== GRID LAYOUT ===== */
+.allcategoryimage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* ===== CATEGORY CARD ===== */
+.category {
+  background: #1a1a1a;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.4s ease;
+  cursor: pointer;
+  padding-bottom: 25px;
+}
+
+.category:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(255, 215, 0, 0.15);
+}
+
+/* ===== IMAGE ===== */
+.category-img {
+  overflow: hidden;
+}
+
+.category img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.category:hover img {
+  transform: scale(1.08);
+}
+
+/* ===== TEXT ===== */
+.category h5 {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.category p {
+  color: #d4af37;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+/* ============================= */
+/* 📱 TABLET RESPONSIVE */
+/* ============================= */
+@media (max-width: 992px) {
+  .allcategoryimage {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .category img {
+    height: 300px;
+  }
+}
+
+/* ============================= */
+/* 📱 MOBILE RESPONSIVE */
+/* ============================= */
+@media (max-width: 600px) {
+  .categories {
+    padding: 60px 20px;
+  }
+
+  .category-title {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .allcategoryimage {
+    grid-template-columns: 1fr;
+  }
+
+  .category img {
+    height: 250px;
+  }
+
+  .category h5 {
+    font-size: 18px;
+  }
+}

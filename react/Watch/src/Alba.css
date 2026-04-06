@@ -1,0 +1,171 @@
+/* .mainvideocontainer{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.bgvideo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+ } 
+ .allwatches{
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+ }
+
+ .watchimages{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    cursor: pointer;
+ }
+ .brandimages img{
+height: 70vh;
+width: 100%;
+object-fit: cover;
+border-radius: 14px;
+ }
+ .link{
+    text-decoration: none;
+    color: black;
+ }
+
+
+  */
+
+
+
+  /* ================= VIDEO SECTION ================= */
+.mainvideocontainer {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.bgvideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= HEADER ================= */
+.allwatches {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 5%;
+  /* background: #0f0f0f; */
+  /* color: #fff; */
+  cursor: pointer;
+}
+
+.allwatches h1 {
+  font-size: 36px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+
+/* ================= WATCH SECTION ================= */
+.watchimages {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 5%;
+  /* background: #0f0f0f; */
+  flex-wrap: wrap;   /* IMPORTANT for responsiveness */
+}
+
+/* ================= CARD ================= */
+.brandimages {
+  width: 30%;
+  /* background: #1a1a1a; */
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.brandimages:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+}
+
+/* ================= IMAGE ================= */
+.brandimages img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ================= TEXT ================= */
+.brandimages h6 {
+  margin-top: 15px;
+  font-size: 16px;
+  /* color: #d4af37; */
+}
+
+.brandimages p {
+  font-size: 14px;
+  /* color: #ccc; */
+  margin-top: 8px;
+}
+
+/* ================= TABLET (≤ 992px) ================= */
+@media (max-width: 992px) {
+
+  .allwatches {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .brandimages {
+    width: 45%;   /* 2 per row */
+  }
+
+  .brandimages img {
+    height: 260px;
+  }
+}
+
+/* ================= MOBILE (≤ 600px) ================= */
+@media (max-width: 600px) {
+
+  .mainvideocontainer {
+    height: 45vh;
+  }
+
+  .allwatches h1 {
+    font-size: 26px;
+  }
+
+  .brandimages {
+    width: 100%;   /* 1 per row */
+  }
+
+  .brandimages img {
+    height: 220px;
+  }
+
+  .watchimages {
+    gap: 20px;
+  }
+}
+
+

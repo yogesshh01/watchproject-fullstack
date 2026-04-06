@@ -1,0 +1,54 @@
+.formcontainer {
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+  height: 100vh;             
+  
+  
+}
+
+.signupage {
+  background: white;
+  padding: 40px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: auto;
+  
+  
+}
+
+.input input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 10px;
+ 
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  /* width: 100%; */
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.headtext h1{
+    color: blue;
+    /* margin-bottom: 40px; */
+    font-weight: bolder;
+    
+}
+
+.par{
+    cursor: pointer;
+}

@@ -1,0 +1,93 @@
+.navbar ul li{
+  text-decoration: none;
+}
+.navbar {
+  
+  top: 0;
+  width: 100%;
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  color: white;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: gold;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+.nav-links li:hover {
+  color: gold;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  
+}
+.menuOpen {
+    color: white;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+ 
+}
+
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+    
+  }
+}
+.navbarlink a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.account a{
+  list-style: none;
+}
