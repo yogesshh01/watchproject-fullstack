@@ -1,0 +1,7 @@
+{
+  "name": "watchproject-root",
+  "private": true,
+  "scripts": {
+    "build": "cd react/Watch && npm install && npm run build"
+  }
+}
